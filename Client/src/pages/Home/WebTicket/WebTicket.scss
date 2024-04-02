@@ -1,0 +1,450 @@
+.web-ticket {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://i.redd.it/bnef3fhuqm261.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    // display: flex;
+    h1 {
+        color: brown;
+    }
+
+    .body-web {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        padding-left: 21vw;
+        padding-top: 8.5vw;
+        backdrop-filter: blur(20px);
+
+        .input-post {
+            position: fixed;
+            top: 5vh;
+            width: 48%;
+            height: 35vw;
+            background-color: rgba(0, 0, 0, 0.95);
+            border-radius: 10px;
+            transition: 1s;
+            padding: 1rem;
+            overflow: hidden;
+
+            .input-bar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 3vw;
+                padding: 5px;
+                background-color: rgba(40, 39, 38, 0.5);
+                border-radius: 20px;
+                .btn-post{
+                    width: 80px;
+                    height: 2rem;
+                    // margin-right: 0.5rem;
+                    padding: 0px 5px;
+                    border-radius: 15px;
+                    background-color: brown;
+                    color: #fff;
+                }
+            }
+
+            // margin-top: 0.5rem;
+            input {
+                width: 100%;
+                height: 2rem;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                padding-left: 1rem;
+                color: aliceblue;
+            }
+
+            i {
+                color: brown;
+                font-size: 20px;
+                padding-right: 0.5rem;
+            }
+
+            .add-photo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            .toggle {
+                position: absolute;
+                right:30px;
+
+                #toggle_checkbox {
+                    display: none;
+                }
+
+                label {
+                    display: block;
+                    // position: absolute;
+                    top: 50%;
+                    right: 0;
+                    left: 0;
+                    width: 80px;
+                    height: 42px;
+                    margin: 0 auto;
+                    background-color: #77b5fe;
+                    border-radius: 56px;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                    transition: 0.3s ease background-color;
+                    overflow: hidden;
+                    border: 2px solid #febf77;
+                }
+
+                #star {
+                    position: absolute;
+                    top: 5px;
+                    left: 11px;
+                    width: 28px;
+                    height: 28px;
+                    background-color: #fafd0f;
+                    transform: scale(1);
+                    border-radius: 50%;
+                    transition: 0.3s ease top, 0.3s ease left, 0.3s ease transform, 0.3s ease background-color;
+                    z-index: 1;
+                }
+
+                #star-1 {
+                    position: relative;
+                }
+
+                #star-2 {
+                    position: absolute;
+                    transform: rotateZ(36deg);
+                }
+
+                .star {
+                    top: -2px;
+                    left: -7px;
+                    font-size: 50px;
+                    line-height: 28px;
+                    color: #fafd0f;
+                    transition: 0.3s ease color;
+                }
+
+                #moon {
+                    position: absolute;
+                    bottom: -50px;
+                    right: 10px;
+                    width: 30px;
+                    height: 30px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    transition: 0.3s ease bottom;
+                }
+
+                #moon:before {
+                    content: "";
+                    position: absolute;
+                    top: -13px;
+                    left: -17px;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #03a9f4;
+                    border-radius: 50%;
+                    transition: 0.3s ease background-color;
+                }
+
+                #toggle_checkbox:checked+label {
+                    background-color: #000;
+                }
+
+                #toggle_checkbox:checked+label #star {
+                    top: 0px;
+                    left: 64px;
+                    transform: scale(0.1);
+                    background-color: yellow;
+                }
+
+                #toggle_checkbox:checked+label .star {
+                    color: yellow;
+                }
+
+                #toggle_checkbox:checked+label #moon {
+                    bottom: 6px;
+                }
+
+                #toggle_checkbox:checked+label #moon:before {
+                    background-color: #000;
+                }
+            }
+
+        }
+
+        .render-post {
+            overflow-x: hidden;
+            width: 65%;
+            height: 82vh;
+            padding-right: 3vw;
+        }
+
+        .post {
+            width: 100%;
+            // height: 60vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            padding: 1rem;
+            color: white;
+            margin-top: 0.5rem;
+
+            p {
+                width: 100%;
+            }
+
+            i {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+
+    .chat-bar {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 30vw;
+        height: 100vh;
+        background-color: rgba(14, 13, 13, 0.8);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        transition: 1s;
+
+        .friends-chat {
+            padding-top: 2.5rem;
+            padding-left: 1rem;
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+            border-radius: 20px;
+            border-bottom: 2px solid brown;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .status-friend {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                right: 5px;
+                bottom: 0;
+                border: 2px solid rgba(14, 13, 13);
+            }
+        }
+
+        .friends-boxchat {
+            position: relative;
+
+            .status-friend {
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                left: 3rem;
+                bottom: 0;
+                border: 2px solid rgba(14, 13, 13);
+            }
+        }
+    }
+
+    .chat-box {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0vw;
+        height: 100vh;
+        background-color: rgba(14, 13, 13, 0.8);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        transition: 1s;
+
+        .input-chat {
+            position: relative;
+            padding: 1rem;
+            .emoji{
+                position: absolute;
+                bottom: -50px;
+            }
+            .button-emoji{
+                position: absolute;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                border-radius: 15px;
+                background-color: transparent;
+                cursor: pointer;
+                top: 1rem;
+                right: 5rem;
+            }
+        }
+        
+        .button-send {
+            position: absolute;
+            background-color: brown;
+            width: 3.5rem;
+            color: aliceblue;
+            border: none;
+            border-radius: 10px;
+            padding: 0.3rem 1rem;
+            cursor: pointer;
+            transition: .5s;
+            overflow: hidden;
+            right: 1rem;
+        }
+
+        .cloud1 {
+            font-size: 0.5rem;
+            position: absolute;
+            left: -10px;
+        }
+
+        .cloud2 {
+            font-size: 0.7rem;
+            position: absolute;
+            bottom: 5px;
+            right: -15px;
+
+        }
+
+        .button-send:hover {
+            .fly {
+                animation: flya 2s linear infinite;
+
+            }
+
+            .cloud1 {
+                animation: cloud1 3s linear infinite;
+            }
+
+            .cloud2 {
+                animation: cloud2 4s linear infinite;
+            }
+
+            // background-color: rgb(0, 0, 0);
+        }
+
+        @keyframes cloud1 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(50px);
+            }
+        }
+
+        @keyframes cloud2 {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50px);
+            }
+        }
+
+        @keyframes flya {
+            0% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.1) translateX(8px) translateY(-8px);
+            }
+
+            40% {
+                transform: scale(1.2) translateX(16px) translateY(-16px);
+            }
+
+            45% {
+                transform: scale(1.3) translateX(30px) translateY(-30px);
+            }
+
+            46% {
+                transform: scale(1.2) translateX(30px) translateY(0px);
+            }
+
+            47% {
+                transform: scale(1.1) translateX(30px) translateY(16px);
+            }
+
+            50% {
+                transform: scale(1) translateX(30px) translateY(30px);
+            }
+
+            55% {
+                transform: scale(1) translateX(0px) translateY(30px);
+            }
+
+            60% {
+                transform: scale(1) translateX(-30px) translateY(30px);
+            }
+
+            70% {
+                transform: scale(1) translateX(-16px) translateY(16px);
+            }
+
+            85% {
+                transform: scale(1) translateX(-8px) translateY(8px);
+            }
+
+            100% {
+                transform: scale(1) translateX(0px) translateY(0px);
+            }
+
+
+        }
+
+        .send {
+            color: brown;
+        }
+
+        .input-chat input {
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            padding: 0 1rem;
+            color: aliceblue;
+            background-color: black;
+        }
+    }
+
+    .render-chat {
+        width: 100%;
+        height: 80%;
+        backdrop-filter: blur(50px);
+        padding: 3rem 1rem 1rem 1rem;
+
+        .render-message {
+            width: 100%;
+            height: 90%;
+            padding: 1rem;
+            border-radius: 10px;
+            overflow-y: scroll;
+            background-color: rgba(0, 0, 0, 0.29);
+        }
+    }
+
+    // .addFriend{
+    //     color: orangered;
+    //     z-index: 1;
+    // }
+    // .addFriend::before{
+    //     width: 30px;
+    //     height: 30px;
+    //     background-color: black;
+    //     z-index: 2;
+    // }
+}

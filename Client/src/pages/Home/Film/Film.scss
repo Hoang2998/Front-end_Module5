@@ -1,0 +1,393 @@
+
+.Film{
+    position: relative;
+    background-image: url(../../../../public/images/5509862.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    height: 100vh;
+    .Alert__store{
+        position: absolute;
+        width: 300px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(15px);
+        z-index: 100;
+        color: aqua;
+        box-shadow: 2px 2px 20px aqua;
+        left:40%;
+        bottom: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .5s;
+        overflow: hidden;
+        border-radius: 10px;
+
+    }
+    .Store__detail{
+        position: absolute;
+        width: 80vw;
+        height: 0vh;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        margin-left: 20vw;
+        transition: 1s;
+        overflow: hidden;
+        color: #f5f5f5;
+        // padding: 3rem ;
+        .button__detail{
+            border: 1px solid red;
+            padding: 0.8rem 1.5rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: rgba(255, 0, 0, 0.67);
+            transition: .5s;
+        
+        }
+        .btn{
+            position: absolute;
+            left: 4rem;
+            bottom: 4rem;
+        }
+        .button__detail:hover{
+            background-color: red;
+            color: #f5f5f5;
+            box-shadow: 2px 2px 20px red;
+        }
+    }
+    .Store__detail h1{
+        // position: absolute;
+        font-size: 1.5rem !important;
+        padding: 0rem 0.5rem;
+        width: 50%;
+        // text-align: center;
+        height: 5vh;
+        text-wrap: break-word;
+        color: brown;
+    }
+    .Store__render--slide{
+        margin-left: 20vw;
+        // margin-top: 5vw;
+        width: 80vw;
+        height: 80%;
+        // overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.8);
+        .container{
+            position: absolute;
+            left:60%;
+            top:40%;
+            transform: translate(-50%,-50%);
+            width:100%;
+            height:80%;
+            padding:50px;
+            background-color: #f5f5f5;
+            box-shadow: 0 30px 50px #6d6a6a;
+        }
+        #slide{
+            width:max-content;
+            margin-top:50px;
+            // filter: brightness(0.4);
+        }
+        .item{
+            width:200px;
+            height:300px;
+            background-position: 50% 50%;
+            display: inline-block;
+            transition: 0.5s;
+            background-size: cover;
+            position: absolute;
+            z-index: 1;
+            top:50%;
+            transform: translate(0,-50%);
+            border-radius: 20px;
+            box-shadow:  0 30px 50px #505050;
+        }
+        .item:nth-child(1),
+        .item:nth-child(2){
+            left:0;
+            top:0;
+            transform: translate(0,0);
+            border-radius: 0;
+            width:100%;
+            height:100%;
+            box-shadow: none;
+        }
+        .item:nth-child(3){
+            left:50%;
+        }
+        .item:nth-child(4){
+            left:calc(50% + 220px);
+        }
+        .item:nth-child(5){
+            left:calc(50% + 440px);
+        }
+        .item:nth-child(n+6){
+            left:calc(50% + 660px);
+            opacity: 0;
+        }
+        .item .content{
+            position: absolute;
+            // top:60%;
+            border-radius: 0 20% 0 20%;
+            bottom: -28%;
+            left:150px;
+            width:350px;
+            height: 320px;
+            padding: 20px 25px;
+            text-align: left;
+            backdrop-filter: blur(30px);
+            transform: translate(0,-50%);
+            display: none;
+            font-family: system-ui;
+        }
+        .item .content button{
+            color: brown;
+            background-color: rgba(0, 0, 0, 0.3) ;
+            border-radius: 50px;
+            transition: .5s;
+        }
+        .item .content button:hover{
+            color: white;
+            background-color: red ;
+            box-shadow: 2px 2px 20px red;
+
+
+        }
+        .item:nth-child(2) .content{
+            display: block;
+            z-index: 11111;
+        }
+        .item .name{
+            // height: 20%;
+            font-size: 25px;
+            font-weight: bold;
+            color: brown;
+            opacity: 0;
+            animation:showcontent 1s ease-in-out 1 forwards
+        }
+        .item .desa{
+            // height: 40%;
+            color:white;
+            font-family: 'Times New Roman', Times, serif;
+            opacity: 0;
+            font-weight: 800;
+            animation:showcontent 1s ease-in-out 0.3s 1 forwards;
+            display: block;
+            display: -webkit-box;
+            max-width: 100%;
+            height: 82px;
+            margin: 10px auto;
+            font-size: 16px;
+            line-height: 1;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .item button{
+            padding:10px 20px;
+            border:none;
+            opacity: 0;
+            animation:showcontent 1s ease-in-out 0.6s 1 forwards
+        }
+        @keyframes showcontent{
+            from{
+                opacity: 0;
+                transform: translate(0,100px);
+                filter:blur(33px);
+            }to{
+                opacity: 1;
+                transform: translate(0,0);
+                filter:blur(0);
+            }
+        }
+        .buttons{
+            position: absolute;
+            bottom:5%;
+            left: -20%;
+            z-index: 222222;
+            text-align: center;
+            width:100%;
+        }
+        .buttons button{
+            width:50px;
+            height:50px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            color: brown;
+            margin: 0.5rem;
+            transition: 0.5s;
+        }.buttons button:hover{
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 2px 2px 30px red;
+        }
+    }
+    .Store__render{
+        position: absolute;
+        width: 100vw;
+        // margin-left: 20vw;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        overflow-x: hidden;
+       
+        
+    }
+    .buttons__render{
+        position: absolute;
+        right: 5%;
+       top: -15%;
+    }
+    .buttons__render button{
+        width: 2rem;
+        height: 2rem;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: red;
+        border-radius: 50%;
+        margin: 2px;
+        transition: .5s;
+    }
+    .buttons__render button:hover{
+        box-shadow: 2px 2px 20px red;
+    }
+    .itemRender{
+        // position: absolute;
+        transform: translate(0%,0%);
+    }
+        .itemRender img:hover{
+            width: 320px;
+            height: 200px;
+        }
+    .Store__render--list{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        padding-top: 1vw;
+        padding-left: 24vw;
+        padding-bottom: 5vw;
+        background-color: rgba(0, 0, 0, 0.5);
+        .listRender{
+            width: 280px;
+            height: 480px;
+            background-color: rgba(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+        .listRender:hover{
+             img{
+                width: 300px;
+                height: 380px;    
+            }
+        }
+        
+        .contentFilm{
+            width: 250px;
+            color: silver;
+            padding: 0.5rem 0.5rem 1rem 1rem;
+
+        }
+
+    }
+    .BuyTicket{
+        position: absolute;
+        height: 0vh;
+        width: 100%;
+        padding-left:22vw ;
+        margin-top: 5vw;
+        background-color: rgba(12, 12, 12, 0.98);
+        transition: 1s;
+        overflow: hidden;
+        color: #f5f5f5;
+        .dayTicket{
+            color: rgba(255, 166, 0, 0.25);
+            
+        }
+        .dayTicket:hover{
+            cursor: pointer;
+            transition: 0.5s;
+            color: rgba(255, 166, 0, 0.8);
+        }
+        .btn_ticket{
+            margin: 1rem 0;
+            padding: 0.5rem 1rem ;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #f5f5f5;
+        }
+        .chair{
+            color: white;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+        .chair:hover{
+            cursor: pointer;
+            transition: 0.5s;
+            color: orange;
+        }
+        .chair::before{
+            content: "";
+            position: absolute;
+            z-index: 2;
+            width: 55px;
+            height: 55px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        .chair2{
+            position: absolute;
+            z-index: 1;
+            
+        }
+       
+
+    }
+    .btn_ticket_pay{
+        padding: 0.5rem 1rem ;
+        background-color: rgba(0, 0, 0, 0.6);
+        border: none;
+        color:brown;
+        transition: 0.5s;
+        border-radius: 10px;
+        font-weight: 800;
+        width: 200px;
+    }
+    .btn_ticket_pay:hover{
+        background-color: red;
+        color:white;
+        box-shadow: 2px 2px 20px red;   
+    }
+    .payment{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100vh;
+        background-color: white;
+        color: black;
+        z-index: 11;
+        transition: 1s;
+        overflow: hidden;
+        // padding: 1rem;
+        table{
+            margin: 1rem;
+            width: 97%;
+            border-collapse: collapse;
+        }
+        th{
+            text-align: center;
+        }
+        td{
+            border: 1px solid black;
+            text-align: center;
+        }
+        button{
+            width: 100%;
+        }
+        h1{
+            margin: 1rem ;
+        }
+    }
+    .close{
+        margin: 1rem;
+    }
+}

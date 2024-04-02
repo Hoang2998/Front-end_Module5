@@ -1,0 +1,184 @@
+.AdminBills{
+    background-image: url(https://mega.com.vn/media/news/0106_hinh-nen-4k-may-tinh32.jpg);
+    width: 100%;
+    height: 100vh;
+    padding-left: 20vw;
+    // padding-top: 5vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    .AdminBills__render{
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.68);
+        backdrop-filter: blur(10px);
+        padding-top: 5vw;
+        padding-left: 1vw;
+        overflow: hidden;
+        display: flex;
+        color: aliceblue;
+        .table__showtime{
+            padding: 2vw;
+            width: 60%;
+            height: 90vh;
+            background-color: rgba(38, 40, 40, 0.5);
+            table {
+                border-collapse: collapse;
+                // overflow-x: hidden;
+                width: 100%;
+                // height: 90%;
+                text-align: center;
+                th{
+                    border: 1px solid rgba(192, 192, 192, 0.662);
+                    padding: 0.5rem;
+                    color: brown;
+                }
+                td{
+                    border: 1px solid rgba(192, 192, 192, 0.662);
+                    height: 50px;
+                    padding: 0.5rem;
+                }
+            }
+            .table__showtime__render{
+                overflow-x: hidden;
+                height: 70vh;
+                width: 100%;
+                
+            }
+        }
+        .btn3{
+            width: 100%;
+            margin-top: 2vw;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: red;
+            padding: 0.5vw;
+            transition: 0.5s;
+            font-weight: 800;
+        }
+        .btn3:hover{
+            background-color: red;
+            color: aliceblue;
+            transition: .5s;
+        }
+        // table{
+        //     width: 95%;
+        //     color: aliceblue;
+        //     text-align: center;
+        // }
+        // th{
+        //     border-bottom: 1px solid rgba(192, 192, 192, 0.662);
+        //     padding: 1rem;
+        // }
+        // td{
+        //     border-bottom: 1px solid rgba(192, 192, 192, 0.662);
+        //     padding: 1rem;
+        // }
+        // tr:hover{
+        //     background-color: rgba(0, 0, 0, 0.8);
+        // }
+        // button{
+        //     color: rgba(192, 192, 192, 0.696);
+        //     background-color: transparent;
+        //     border: none;
+        //     transition: .5s;
+        //     font-size: 0.8rem;
+        //     margin: 0 0.5rem;
+        // }
+
+        // button:hover{
+        //     color:red;
+        //     // font-weight: 600;
+        // }
+        // .adminProduct--pana{
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+        //     gap: 1rem;
+        //     margin-top: 1rem;
+        //     color: aliceblue;
+        //     position: absolute;
+        //     bottom: 2rem;
+        //     left: 40%;
+        // }
+        // .Bill__detail{
+        //     position: absolute;
+        // width: 60vw;
+        // height:0vh;
+        // background-color: rgba(252, 250, 250, 0.9);
+        // backdrop-filter: blur(12px);
+        // color: black;
+        // top: 5%;
+        // left: 10%;
+        // overflow: hidden;
+        // transition: 1s;
+        // h1{
+        //     color: brown;
+        //     padding: 1rem;
+        // }
+        // table{
+        //     color: black;
+        //     margin-left: 1rem;
+        // }
+        // button{
+        //     background-color: brown;
+        //     color: aliceblue;
+        //     border: none;
+        //     padding: 0.5rem 2rem;
+        //     position: absolute;
+        //     right: 50px;
+        //     bottom: 30px ;
+        // }
+        
+        // span{
+        //     color: rgb(25, 24, 24);
+        //     font-weight: 800;
+        // }
+        // p{
+        //     margin-left: 2rem;
+        // }
+
+        // }
+        .table__time{
+            width: 100%;
+            height: 0vh;
+            margin: 1vw 0;
+            transition: 1s;
+            overflow: hidden;
+        }
+        .table__setUp{
+            width: 40%;
+            height: 90vh;
+            background-color: rgba(38, 40, 40, 0.5);
+            color: aliceblue;
+            padding: 2vw;
+            .btn1{
+                position: relative;
+                width: 50px;
+                height: 30px;
+                background-color: rgb(10, 11, 11);
+                button{
+                    position: absolute;
+                    width: 50px;
+                    height: 30px;
+                    z-index: 1;
+                    border: none;
+                    background-color: transparent;
+                    color: aliceblue;
+                }
+                button:hover{
+                    color: white;
+                    background-color: rgb(255, 0, 0);
+                }
+            }
+            .btn1::before{
+                position: absolute;
+                content: '';
+                width: 50px;
+                height: 30px;
+                background-color: rgba(46, 42, 42, 0.833) ;
+                z-index: 1;
+            }
+        }
+    }
+}

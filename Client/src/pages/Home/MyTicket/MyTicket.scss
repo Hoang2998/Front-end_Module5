@@ -1,0 +1,270 @@
+.historyBill{
+    background-image: url(https://wallpaperaccess.com/full/237745.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    padding-left: 20vw;
+    position: relative;
+    .historyBill--pana{
+        display: flex;
+        color: aliceblue;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .historyBill--pana div:hover{
+        color: red;
+        text-shadow: 2px 2px 20px red;
+    }
+    .historyBill__detail{
+        position: absolute;
+        width: 100%;
+        height:0vh;
+        // background-color: rgba(47, 46, 46, 0.9);
+        backdrop-filter: blur(50px);
+        color: black;
+        top: 5%;
+        // left: 10%;
+        overflow: hidden;
+        transition: 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .historyBill__detail p{
+        margin-left: 2rem;
+    }
+    .historyBill__detail span{
+        color: brown;
+        font-weight: 800;
+    }
+    .historyBill__detail th{
+        color: black !important;
+    }
+    .historyBill__detail td{
+        color: black !important;
+    }
+    .historyBill__render__table{
+        width: 80vw;
+        height: 68vh;
+        overflow-x: hidden;
+    }
+    .historyBill__detail button{
+        background-color: brown;
+        color: aliceblue;
+        border: none;
+        padding: 0.5rem 2rem;
+        position: absolute;
+        right: 50px;
+        bottom: 30px ;
+    }
+    .historyBill__render{
+        width: 80vw;
+        height: 100vw;
+        background-color: rgba(0, 0, 0, 0.733);
+        backdrop-filter: blur(10px);
+        padding-top: 5vw;
+        h1{
+            margin: 1rem;
+            color: brown;
+        }
+        table{
+            margin: 1rem;
+            width: 95%;
+        }
+        th{
+            color: aliceblue;
+            text-align: center;
+            border-bottom: 1px solid rgba(192, 192, 192, 0.534);
+            padding: 1rem;
+        }
+        td{
+            color: aliceblue;
+            text-align: center;
+            border-bottom: 1px solid rgba(192, 192, 192, 0.534);
+            padding: 0.5rem;
+            height: 1rem;
+            overflow: hidden;
+            // padding: 1rem;
+        }
+        .seeDetail{
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 0.8rem;
+        }
+        .seeDetail:hover{
+            color: brown;
+        }
+    }
+    .Qr{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .msg{
+        position:absolute;
+        top:10px;
+        left:10px;
+        color:#555;
+        text-transform:uppercase;
+        z-index:4;
+      }
+      
+      .m-ticket{
+        width:350px;
+        background:#fff;
+        border-radius:12px;
+        overflow:hidden;
+        box-shadow:0 0 25px #bbb;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        position:relative;
+        cursor:move;
+      }
+      
+      
+      .m-ticket:before{
+        content:"";
+        position:absolute;
+        left:-10px;
+        top:41%;
+        background:#eee;
+        box-shadow:inset 0 0 25px #bbb;
+        width:17px;
+        height:17px;
+        border-radius:50%;
+      }
+      
+      
+      .m-ticket:after{
+        content:"";
+        position:absolute;
+        right:-10px;
+        top:41%;
+        background:#eee;
+        box-shadow:inset 0 0 25px #bbb;
+        width:17px;
+        height:17px;
+        border-radius:50%;
+      }
+      
+      
+      .m{
+        position:absolute;
+        right:-5px;
+        top:15%;
+        transform:rotate(270.5deg);
+        font-size:.80em;
+        color:#888;
+      }
+      
+      
+      .movie-details{
+        // width:100%;
+        display:flex;
+        gap:20px;
+        padding:20px 20px;
+      }
+      
+      
+      .poster{
+        width:100%;
+        height:120px;
+        object-fit:contain;
+        border-radius:8px;
+        box-shadow:0 0 10px #888;
+      }
+      
+       .moviea  h4{
+        // text-transfrom:capitalize;
+        font-size:1.6em;
+        margin-bottom:20px;
+        width:200px;
+      }
+      
+      
+       .moviea p{
+        font-size:.80em;
+        line-height:19px;
+        color:#777;
+      }
+      
+      
+      .m-ticket > .info{
+        width:93%;
+        border-radius:20px;
+        background:#eee;
+        padding:10px 0px;
+        text-align:center;
+        font-size:.72em;
+      }
+      
+      
+      
+      .m-ticket > .ticket-details{
+        display:flex;
+        gap:20px;
+        padding:20px 20px;
+      }
+      
+      
+     .scan{
+        width:100px;
+        height:100px;
+      }
+      
+      .m-ticket > .ticket-details > .ticket{
+        text-align:center;
+        width:200px;
+      }
+      
+      
+      .m-ticket > .ticket-details > .ticket > p{
+        font-size:.80em;
+        line-height:19px;
+        color:#777;
+      }
+      
+      .m-ticket > .ticket-details > .ticket > b{
+        margin-top:10px;
+        display:inline-block;
+        font-size:1.2em;
+        font-weight:400;
+      }
+      
+      
+      .m-ticket > .ticket-details > .ticket > h6{
+        text-transform:uppercase;
+        font-weight:100;
+        font-size:.95em;
+        margin-top:10px;
+      }
+      
+      
+      .m-ticket > .info-cancel{
+        width:100%;
+        background:#eee;
+        color:#888;
+        padding:10px 0px;
+        text-align:center;
+        font-size:.80em;
+      }
+      
+      
+      .m-ticket > .total-amount{
+        display:flex;
+        justify-content:space-between;
+        padding:12px 20px;
+        font-weight:700;
+        font-size:.90em;
+        width:100%;
+      }
+}
